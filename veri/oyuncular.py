@@ -17,7 +17,7 @@ KADRO_DATA = [
     {"ad": "Anfernee Dijksteel", "dt": datetime(1996, 10, 27)},
     {"ad": "Ahmet Oğuz", "dt": datetime(1993, 1, 16)},
     {"ad": "Show (Cafumana)", "dt": datetime(1999, 3, 6)},
-    {"ad": "Habib Keita", "dt": datetime(2002, 2, 5)},
+    {"ad": "Habib Keita", "dt": datetime(2002, 3, 30)},
     {"ad": "Joseph Nonge", "dt": datetime(2005, 5, 15)},
     {"ad": "Karol Linetty", "dt": datetime(1995, 2, 2)},
     {"ad": "Samet Yalçın", "dt": datetime(1994, 3, 6)},

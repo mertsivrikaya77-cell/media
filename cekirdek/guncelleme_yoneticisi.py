@@ -9,7 +9,8 @@ class GuncellemeYoneticisi(QThread):
 
     def __init__(self, mode="kontrol"):
         super().__init__()
-        self.repo_dir = os.getcwd()
+        # Kök dizini (Kocaelispor_App) bul: Bu dosya cekirdek/ içindedir, 2 üst klasöre çık.
+        self.repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.mode = mode  # "kontrol" veya "guncelle"
 
     def run(self):
