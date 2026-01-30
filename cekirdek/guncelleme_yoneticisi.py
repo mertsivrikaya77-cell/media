@@ -11,7 +11,9 @@ class GuncellemeYoneticisi(QThread):
         super().__init__()
         # 1. Öncelik: Belgelerim/Kocaelispor_Data (Uygulama Modu)
         docs_dir = os.path.join(os.path.expanduser("~"), "Documents", "Kocaelispor_Data")
-        if os.path.exists(os.path.join(docs_dir, ".git")):
+        
+        # Kesinlikle Documents klasörünü kullanmaya zorla (Eğer varsa)
+        if os.path.exists(docs_dir) and os.path.exists(os.path.join(docs_dir, ".git")):
             self.repo_dir = docs_dir
         else:
             # 2. Öncelik: Geliştirici Modu (Dosya konumu)
