@@ -9,8 +9,14 @@ class GuncellemeYoneticisi(QThread):
 
     def __init__(self, mode="kontrol"):
         super().__init__()
-        # Kök dizini (Kocaelispor_App) bul: Bu dosya cekirdek/ içindedir, 2 üst klasöre çık.
-        self.repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        # 1. Öncelik: Belgelerim/Kocaelispor_Data (Uygulama Modu)
+        docs_dir = os.path.join(os.path.expanduser("~"), "Documents", "Kocaelispor_Data")
+        if os.path.exists(os.path.join(docs_dir, ".git")):
+            self.repo_dir = docs_dir
+        else:
+            # 2. Öncelik: Geliştirici Modu (Dosya konumu)
+            self.repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
         self.mode = mode  # "kontrol" veya "guncelle"
 
     def run(self):
